@@ -1,0 +1,11 @@
+app:
+  build:
+    base: [ nodejs@16 ]
+    build:
+      - |
+        cd headless-cms
+        yarn
+        yarn build-website
+    deploy: [ './website/~.next', 'website/~next.config.js', 'node_modules', 'package.json' ]
+  run:
+    start: yarn start

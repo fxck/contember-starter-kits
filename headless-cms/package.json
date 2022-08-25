@@ -4,7 +4,7 @@
     "start": "npm run start-engine && concurrently npm:start-admin npm:start-website",
     "start-engine": "docker-compose up --detach && npm run contember migrations:execute . -- --yes",
     "start-admin": "vite admin --port 1480 --host 0.0.0.0",
-    "start-website": "next dev website",
+    "start-website": "next start website",
     "build": "concurrently npm:build-admin npm:build-api npm:build-website",
     "build-admin": "tsc --project admin && vite build admin",
     "build-api": "tsc --project api",

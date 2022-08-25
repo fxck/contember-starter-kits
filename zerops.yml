@@ -7,6 +7,6 @@ app:
         yarn
         yarn build-website
         ls
-    deploy: [ './website/.next', './website/next.config.js', 'node_modules', 'package.json' ]
+    deploy: [ './headless-cms/website/.next', './headless-cms/website/next.config.js', './headless-cms/node_modules', './headless-cms/package.json' ]
   run:
-    start: yarn start
+    start: yarn start-website

@@ -1,4 +1,3 @@
-import type { NextPage } from 'next'
 import Head from 'next/head'
 
 import { serverSideFetch } from '../lib/graphql/gqlfetch'
@@ -51,6 +50,8 @@ export default function (props: any) {
 
 export async function getStaticProps() {
 	const { data, errors } = await serverSideFetch(getHomePage)
+
+	console.log({ data, errors });
 
 	return {
 		props: {

@@ -3,10 +3,10 @@ app:
     base: [ nodejs@16 ]
     build:
       - |
-        cd headless-cms
+        cd headless-multilingual-cms
         yarn
         yarn build-website
         ls
-    deploy: [ './headless-cms/website/.next', './headless-cms/website/next.config.js', './headless-cms/node_modules', './headless-cms/package.json' ]
+    deploy: [ './headless-multilingual-cms/website/.next', './headless-multilingual-cms/website/next.config.js', './headless-multilingual-cms/node_modules', './headless-multilingual-cms/package.json' ]
   run:
-    start: cd ./headless-cms && yarn start-website
+    start: cd ./headless-multilingual-cms && yarn start-website-prod
